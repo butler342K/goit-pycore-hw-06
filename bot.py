@@ -52,8 +52,6 @@ class Record:
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
 
 class AddressBook(UserDict):
-    def __init__(self):
-        self.data = {} 
     def add_record(self, record):
         if not isinstance(record, Record):
             raise TypeError("Only Record instances can be added.")
